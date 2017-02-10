@@ -1,0 +1,5 @@
+/**
+ * Sample access control list.
+ */
+Default | org.acme.vehicle.auction | READ | ANY | (true) | ALLOW | Allow all participants read access to all resources
+OwnerUpdate | org.acme.vehicle.auction.Vehicle:v | ALL | org.acme.vehicle.auction.User:u | (v.owner.getIdentifier() == u.getIdentifier()) | ALLOW | Allow the owner of a vehicle total access
